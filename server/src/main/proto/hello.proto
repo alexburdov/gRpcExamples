@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ru.alex.burdovitsin.server";
+option java_outer_classname = "HelloProto";
+
+message HelloRequest {
+  string input = 1;
+}
+
+message HelloResponse {
+  string answer = 1;
+}
+
+service Hello {
+  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
